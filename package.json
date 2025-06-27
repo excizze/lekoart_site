@@ -6,7 +6,7 @@
   "homepage": "https://excizze.github.io/lekoart_site",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noCheck && vite build",
+    "build": "vite build",
     "predeploy": "npm run build",
     "deploy":   "gh-pages -d build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
