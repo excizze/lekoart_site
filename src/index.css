@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lora', serif;
+  color: #2e3330;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Add styles for sticky header */
+.heroui-navbar.heroui-navbar--sticky {
+  position: sticky !important;
+  top: 0 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1000 !important;
+}
+
+/* Add specific styles for our header navbar */
+.header-navbar {
+  background-color: #FFFFFF !important;
+  z-index: 1000 !important;
+}
+
+/* Ensure the navbar content is also solid white */
+.heroui-navbar-content {
+  background-color: #FFFFFF !important;
+}
+
+/* Ensure mobile menu has solid background */
+.heroui-navbar-menu {
+  background-color: #FFFFFF !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.heroui-navbar-menu-item {
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.heroui-navbar-menu-item a {
+  display: block !important;
+  width: 100% !important;
+  padding: 0.5rem 0 !important;
+  font-size: 1rem !important;
+}
+
+/* Fix for menu toggle button */
+.heroui-navbar-toggle {
+  color: #2e3330 !important;
+}
+
+/* Ensure search results have solid white background */
+.heroui-input-wrapper {
+  background-color: #FFFFFF !important;
+}
+
+.heroui-input {
+  background-color: #FFFFFF !important;
+}
+
+/* Add solid background for search results dropdown */
+.search-results-container {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e5e7eb !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  min-width: auto !important;
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* Mobile search results adjustments */
+@media (max-width: 640px) {
+  .mobile-search-results {
+    position: fixed !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 60px !important; /* Adjust based on your navbar height */
+  }
+  
+  .search-results-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+}
+
+/* Ensure search results text doesn't overflow */
+.search-results-container .line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Ensure button text in search results is white */
+.search-results-container button {
+  color: #FFFFFF !important;
+}
